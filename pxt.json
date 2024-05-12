@@ -1,5 +1,5 @@
 {
-    "name": "Bluetooth controller for 8x8",
+    "name": "Bluetooth controller for 8x8 ",
     "description": "",
     "dependencies": {
         "core": "*",

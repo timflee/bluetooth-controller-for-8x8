@@ -44,9 +44,9 @@ let currentMode = 0
 radio.setGroup(1)
 let modeList = ["Face", "Brightness"]
 currentMode = 0
-defaultBrightness_ = 20
+defaultBrightness_ = 60
 currentBrightness_ = defaultBrightness_
-radio.sendValue("bright", currentBrightness_)
+radio.sendValue("bright_%", currentBrightness_)
 basic.showNumber(currentMode)
 basic.forever(function () {
 	
