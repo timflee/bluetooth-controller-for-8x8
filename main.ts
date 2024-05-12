@@ -1,10 +1,10 @@
 input.onButtonPressed(Button.A, function () {
     if (currentMode == 0) {
-        radio.sendString("smile")
+        radio.sendString("happy")
     } else {
         if (currentMode == 1) {
             currentBrightness_ = Math.max(currentBrightness_ - 20, 0)
-            radio.sendValue("bright", currentBrightness_)
+            radio.sendValue("bright_%", currentBrightness_)
         } else {
             music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.InBackground)
         }
@@ -16,7 +16,7 @@ input.onButtonPressed(Button.AB, function () {
     } else {
         if (currentMode == 1) {
             currentBrightness_ = defaultBrightness_
-            radio.sendValue("bright", currentBrightness_)
+            radio.sendValue("bright_%", currentBrightness_)
         } else {
             music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.InBackground)
         }
@@ -28,7 +28,7 @@ input.onButtonPressed(Button.B, function () {
     } else {
         if (currentMode == 1) {
             currentBrightness_ = Math.min(currentBrightness_ + 20, 100)
-            radio.sendValue("bright", currentBrightness_)
+            radio.sendValue("bright_%", currentBrightness_)
         } else {
             music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.InBackground)
         }
