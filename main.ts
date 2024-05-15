@@ -24,7 +24,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (currentMode == 0) {
-        radio.sendString("sad")
+        radio.sendString("happy")
     } else {
         if (currentMode == 1) {
             currentBrightness_ = Math.min(currentBrightness_ + 20, 100)
@@ -35,8 +35,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    currentMode = (currentMode + 1) % 2
-    basic.showNumber(currentMode)
+	
 })
 let currentBrightness_ = 0
 let defaultBrightness_ = 0
